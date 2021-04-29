@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/zmanim",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
