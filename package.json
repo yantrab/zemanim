@@ -5,9 +5,14 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "flogin": "firebase login",
+    "fdeploy": "firebase deploy",
+    "deploy-dev": "npm run build:dev && npm run fdeploy",
+    "deploy-prod": "npm run build:prod && npm run fdeploy"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +24,15 @@
     "@angular/platform-browser": "~11.0.5",
     "@angular/platform-browser-dynamic": "~11.0.5",
     "@angular/router": "~11.0.5",
+    "@types/file-saver": "^2.0.2",
+    "@types/pizzip": "^3.0.1",
+    "date-fns": "^2.21.1",
+    "docxtemplater": "^3.21.1",
+    "file-saver": "^2.0.5",
+    "hebcal": "^2.3.2",
+    "jszip": "^3.6.0",
+    "ngx-file-drop": "^11.1.0",
+    "pizzip": "^3.0.6",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
