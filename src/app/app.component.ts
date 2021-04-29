@@ -3,7 +3,6 @@ import {FileSystemFileEntry, NgxFileDropEntry} from 'ngx-file-drop';
 import { saveAs } from 'file-saver';
 const Hebcal = require('hebcal');
 import {endOfWeek, format, addMinutes} from 'date-fns';
-
 import Docxtemplater from 'docxtemplater';
 import * as PizZip from 'pizzip';
 
