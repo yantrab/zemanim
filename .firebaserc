@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "zemanim-b7b60"
+  },
+  "targets": {
+    "zemanim-b7b60": {
+      "hosting": {
+        "zmanim": [
+          "zemanim-b7b60"
+        ]
+      }
+    }
   }
 }
