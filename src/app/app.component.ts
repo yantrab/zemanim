@@ -31,6 +31,10 @@ export class AppComponent {
   title = 'zmanim';
   example1 = '{shkiah}';
   example2 = '{shkiah + 20}';
+  formatHours = (date: Date) => {
+    const result = format(date, 'HH:MM');
+    return result;
+  }
   dropped(files: NgxFileDropEntry[]) {
     const options = {
       parser: (tag: string) => {
@@ -41,13 +45,13 @@ export class AppComponent {
               return scope;
             }
             else {
-              const arr = tag.split(/[+-]/g);
+              const arr = tag.split(/[+-]/g).map(x => x.trim());
               const action = tag.split('').find(l => ['-', '+'].includes(l));
               // tslint:disable-next-line:no-non-null-assertion
               const keyIndex = arr.findIndex(a => Object.keys(this.zemanim).includes(a))!;
               const date = scope[arr[keyIndex]];
               if (arr.length === 1){
-                return format(date, 'HH:MM');
+                return this.formatHours(date);
               }
               const addMinutesCount = +(action + (keyIndex === 0 ? arr[1] : arr[0]));
               return format(addMinutes(date, addMinutesCount), 'HH:MM');

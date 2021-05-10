@@ -5,14 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "fdeploy": "ng deploy",
     "build:prod": "npm i && ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "flogin": "firebase login",
-    "fdeploy": "firebase deploy",
-    "deploy-dev": "npm run build:dev && npm run fdeploy",
-    "deploy-prod": "npm run build:prod && npm run fdeploy"
   },
   "private": true,
   "dependencies": {
